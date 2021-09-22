@@ -1,0 +1,7 @@
+<p>multiple-form works!</p>
+
+
+<div [formGroup]="form">
+<input type="text" formControlName="name">
+<app-address-form  [address]="form.get('address')"></app-address-form>
+</div>

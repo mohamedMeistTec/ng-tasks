@@ -13,9 +13,17 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 registerLocaleData(en);
 // import { HttpClientModule } from '@angular/common/http';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { MultipleFormComponent } from './multiple-form/multiple-form.component';
+import { AddressFormComponent } from './multiple-form/address-form/address-form.component';
+import { RouterModule, Routes } from '@angular/router';
+export const routes:Routes = [
+  {path:'multiple-form',component:MultipleFormComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
+    MultipleFormComponent,
+    AddressFormComponent,
     
   ],
   imports: [
@@ -27,6 +35,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     FormsModule,
     ReactiveFormsModule,NzButtonModule,
     CKEditorModule,
+    RouterModule.forRoot(routes)
 
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
