@@ -1,0 +1,41 @@
+<h2>test
+
+</h2>
+
+<!-- <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a person"  >
+  <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+  <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+  <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+</nz-select> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button (click)="changeForm('first')">first</button>
+      <button (click)="changeForm('last')">last</button>
+      <button (click)="getValue()">value</button>
+      <button (click)="addNew()">addNew</button>
+    
+      <nz-select ngModel="lucy">
+        <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+        <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+        <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+      </nz-select>
+    </div>
+    <div class="col-lg-6" [formGroup]="form">
+      <div class="mb-3" *ngIf="enableSampleForm">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" formControlName="firstname" class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3" *ngIf="enableSampleForm || enbaleTaxForm">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" formControlName="lastname" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+    </div>
+  </div>
+</div>

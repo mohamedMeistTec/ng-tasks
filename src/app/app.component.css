@@ -1,0 +1,7 @@
+::ng-deep .ant-select-arrow {
+    left: 10px !important;
+}
+
+/* body[dir=rtl] ::ng-deep .ant-select-arrow{
+
+} */
